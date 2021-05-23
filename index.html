@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- CSS styles -->
   <link rel="stylesheet" href="styles.css">
+  <!-- JS -->
+  <script src="main.js"></script>
   <title>Frontend Mentor | Intro component with sign up form</title>
 </head>
 <body>
@@ -21,7 +24,7 @@
     <span><b>Try it free 7 days</b> then $20/mo. thereafter</span>
   </section>
 
-  <form class="container form" action="#" method="POST" novalidate>
+  <form id="form" class="container form" novalidate>
     <div class="form-field">
       <input type="text" name="firstname" id="first-name" placeholder="First Name ">
       <img src="images/icon-error.svg">
@@ -33,7 +36,7 @@
       <small>Error Message</small>
     </div>
     <div class="form-field">
-      <input type="email" name="useremail" id="mail" placeholder="Email Address">
+      <input type="email" name="useremail" id="email" placeholder="Email Address">
       <img src="images/icon-error.svg">
       <small>Error Message</small>
     </div>
