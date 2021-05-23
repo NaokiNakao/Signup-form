@@ -2,7 +2,7 @@
 
 :root {
     /* Colors */
-    --clr-red: hsl(0, 100%, 74%) ;
+    --clr-red: hsl(0, 100%, 74%);
     --clr-green: hsl(154, 59%, 51%);
     --clr-violet: hsl(248, 32%, 49%);
     --clr-dark-blue: hsl(249, 10%, 26%);
@@ -120,6 +120,7 @@ body {
     font-family: inherit;
     font-weight: 400;
     font-size: 0.6em;
+    font-style: italic;
     color: var(--clr-red);
 }
 
@@ -166,4 +167,10 @@ body {
 .form-ftr > p > span {
     color: var(--clr-red);
     font-weight: 500;
+}
+
+/* Desktop design */
+
+@media screen and (min-width:1200px) {
+
 }

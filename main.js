@@ -35,8 +35,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Email validation
-        if (emailValue === '') {
+        if (!isEmail(emailValue)) {
             displayError(email, 'Looks like this is not an email');
+            email.value = '';
+            email.placeholder = 'email@example/com';
+            email.style.color = 'hsl(0, 100%, 74%)';
+
+            email.addEventListener('click', () => {
+                email.placeholder = '';
+                email.style.color = '#000';
+            })
         }
         else {
             correctInput(email);
@@ -48,12 +56,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         else {
             correctInput(password);
-        }
+        } 
     }
 
     function displayError(field, msg) {
         const formField = field.parentElement;
         const small = formField.querySelector('small');
+        field.placeholder = '';
         formField.classList.add('error');
         small.innerText = msg;
     }
@@ -61,5 +70,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function correctInput(field) {
         const formField = field.parentElement;
         formField.classList.remove('error');
+    }
+
+    function isEmail(email) {
+        return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
     }
 });
