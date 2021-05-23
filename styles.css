@@ -12,6 +12,8 @@
     --poppins: 'Poppins', sans-serif;
 }
 
+/* General styles */
+
 * {
     padding: 0;
     margin: 0;
@@ -27,6 +29,8 @@ body {
     font-family: var(--poppins);
     font-size: 16px;
 }
+
+/* Container one styles */
 
 .container-one {
     margin-top: 5em;
@@ -45,4 +49,23 @@ body {
     text-align: center;
     margin: 1.7em 0;
     padding: 0 2em;
+}
+
+/* Container two styles */
+
+.container-two {
+    background-color: var(--clr-blue);
+    color: var(--clr-white);
+    width: 90%;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    align-self: center;
+    text-align: center;
+    padding: 1em 3em;
+    border-radius: 8px;
+    box-shadow: 0 8px 1px rgba(0, 0, 0, 0.2);
+}
+
+.container-two > span {
+    font-weight: 400;
 }
