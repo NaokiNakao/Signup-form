@@ -58,7 +58,6 @@ body {
     color: var(--clr-white);
     width: 90%;
     margin-top: 3em;
-    margin-bottom: 3em;
     align-self: center;
     text-align: center;
     padding: 1em 3em;
@@ -68,4 +67,26 @@ body {
 
 .container-two > span {
     font-weight: 400;
+}
+
+/* Form styles */
+
+.form {
+    margin-top: 1.8em;
+    width: 90%;
+    align-self: center;
+}
+
+.form-field {
+    position: relative;
+    background-color: var(--clr-white);
+}
+
+.form-field > input {
+    border: 2px solid var(--clr-grayish-blue);
+    border-radius: 4px;
+    display: block;
+    font-family: inherit;
+    font-size: 16px;
+    width: 100%;
 }
