@@ -20,7 +20,7 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
     height: 100%;
     background-image: url('images/bg-intro-mobile.png');
     background-color: var(--clr-red);
@@ -172,5 +172,33 @@ body {
 /* Desktop design */
 
 @media screen and (min-width:1200px) {
+    
+    body {
+        background-image: url('images/bg-intro-desktop.png');
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container {
+        /*border: 1px solid #000;*/
+        width: 75%;
+    }
+
+    .container-one {
+        grid-row-start: 2;
+        grid-column-start: 1;
+    }
+
+    .container-two {
+        grid-row-start: 1;
+        grid-column-start: 2;
+    }
+
+    .form {
+        grid-row-start: 2;
+        grid-column-start: 2;
+        padding: 2em 1.5em;
+    }
 
 }
+
